@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { LYRICS_API_ENDPOINT, RESULTS_API_ENDPOINT } from "../constants/Constants";
+import { purifyArtist } from "../utils/artist";
 
 const ResultsContext = createContext();
 
@@ -31,7 +32,8 @@ const Provider = ({ children }) => {
 
   const getLyrics = async (artist, title) => {
     try {
-      const response = await getResponse(LYRICS_API_ENDPOINT + artist.replace('!', 'i') + '\\' + title)
+      const purifiedArtist = purifyArtist(artist);
+      const response = await getResponse(LYRICS_API_ENDPOINT + purifiedArtist + '\\' + title)
       if(response.error){
         setError(response.error);
         setLyrics('');
