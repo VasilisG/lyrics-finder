@@ -28,7 +28,7 @@ const ResultItem = ({ data }) => {
           </div>
           <div className='preview-container flex flex-col align-center md:flex-row items-center mb-3 md-mb-0'>
             <span className='preview font-thin inline-block lg:mr-2 text-center md:text-left md:w-20'>Preview:</span>
-            <audio className="bg-black grayscale w-3/4 text-center md:text-left" src={data.preview} controls></audio>
+            <audio className="grayscale w-3/4 text-center md:text-left" src={data.preview} controls></audio>
           </div>
         </div>
       </div>
