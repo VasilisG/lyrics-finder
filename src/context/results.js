@@ -27,6 +27,7 @@ const Provider = ({ children }) => {
       setError(e);
     } finally {
       setLoading(false);
+      setLyrics('');
     }
   }
 
