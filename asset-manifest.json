@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/lyrics-finder/static/css/main.7b1736db.css",
-    "main.js": "/lyrics-finder/static/js/main.c3d9f1d5.js",
+    "main.css": "/lyrics-finder/static/css/main.288db957.css",
+    "main.js": "/lyrics-finder/static/js/main.270771c9.js",
     "static/js/453.1c0b67b6.chunk.js": "/lyrics-finder/static/js/453.1c0b67b6.chunk.js",
     "index.html": "/lyrics-finder/index.html",
-    "main.7b1736db.css.map": "/lyrics-finder/static/css/main.7b1736db.css.map",
-    "main.c3d9f1d5.js.map": "/lyrics-finder/static/js/main.c3d9f1d5.js.map",
+    "main.288db957.css.map": "/lyrics-finder/static/css/main.288db957.css.map",
+    "main.270771c9.js.map": "/lyrics-finder/static/js/main.270771c9.js.map",
     "453.1c0b67b6.chunk.js.map": "/lyrics-finder/static/js/453.1c0b67b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b1736db.css",
-    "static/js/main.c3d9f1d5.js"
+    "static/css/main.288db957.css",
+    "static/js/main.270771c9.js"
   ]
 }
