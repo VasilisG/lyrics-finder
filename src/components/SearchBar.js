@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import useResultsContext from '../hooks/use-results-context';
 
 const SearchBar = () => {
+
+  const inputRef = useRef(null);
 
   const [term, setTerm] = useState('');
 
@@ -13,6 +15,7 @@ const SearchBar = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    inputRef.current.blur();
     getResults(term);
   }
 
@@ -21,7 +24,7 @@ const SearchBar = () => {
       <button className='search-button bg-zinc-800 px-3 py-2 rounded-l-[30px]' type='submit'value='Search'>
         <img className='search-icon w-6 h-6' src={`${process.env.PUBLIC_URL}/assets/icons/search.svg`} alt='Search Icon'/>
       </button>
-      <input className='search-input w-full text-white bg-zinc-800 rounded-r-[30px] px-2 outline-none focus:outline-none' type='text' placeholder='Enter a song title...' value={term} onChange={handleChange} required/>
+      <input ref={inputRef} className='search-input w-full text-white bg-zinc-800 rounded-r-[30px] px-2 outline-none focus:outline-none' type='text' placeholder='Enter a song title...' value={term} onChange={handleChange} required/>
     </form>
   )
 }
