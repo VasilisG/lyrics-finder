@@ -37,9 +37,9 @@ const Lyrics = () => {
 
   const showLyrics = () => {
     return error ? (
-      <div ref={lyricsRef} className='error w-full text-center text-red-600 bg-stone-800/80 py-4 mb-3 px-4 md:px-0 md:mx-auto xl:mx-0 w-full'>{error}</div>
+      <div ref={lyricsRef} className='error rounded-[10px] w-full text-center text-red-600 bg-zinc-800/80 py-4 mb-3 px-4 md:px-0 md:mx-auto xl:mx-0 w-full'>{error}</div>
     ) : results.length ? (
-      <div ref={lyricsRef} className={`lyrics w-full text-center text-white bg-stone-800/80 hover:bg-stone-800 hover:cursor-copy mb-3 px-4 md:px-0 md:mx-auto xl:mx-0 w-full ${lyrics ? 'py-4' : ''}`} 
+      <div ref={lyricsRef} className={`lyrics rounded-[10px] w-full text-center text-white bg-zinc-800 hover:bg-zinc-800/80 hover:cursor-copy mb-3 px-4 md:px-0 md:mx-auto xl:mx-0 w-full ${lyrics ? 'py-4' : ''}`} 
       dangerouslySetInnerHTML={{
          __html: lyrics ? formatLyrics(lyrics) : results.length ? showInfo() : null
       }}

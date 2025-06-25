@@ -11,10 +11,10 @@ const ResultItem = ({ data }) => {
   }
 
   return (
-    <div className='result-item mb-3 bg-stone-800/80 w-full'>
+    <div className='result-item mb-3 bg-zinc-800 w-full rounded-[10px]'>
       <div className='result-inner-container flex-col-reverse md:flex-row flex p-4'>
         <div className='image-container md:mr-6'>
-          <img className='artist-image shadow-2xl min-w-[120px] hidden md:inline' src={data.artist.picture} alt={data.artist.name}/>
+          <img className='artist-image rounded-[10px] shadow-2xl min-w-[120px] min-h-[120px] hidden md:inline' src={data.artist.picture} alt={data.artist.name}/>
           <div className='lyrics-container text-center mt-4'>
             <button className='lyrics-button text-white bg-sky-600 hover:bg-sky-700 rounded py-1 px-2' type='button' onClick={handleClick}>Get lyrics</button>
           </div>

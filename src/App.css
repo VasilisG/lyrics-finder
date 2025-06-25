@@ -7,6 +7,39 @@
   pointer-events: none;
 }
 
+.search-icon {
+  filter: invert(0.7);
+}
+
+.search-bar-form {
+  transition: 0.2s all ease;
+}
+
+.search-bar-form:hover .search-button,
+.search-bar-form:hover .search-input {
+  background: #34343a;
+  border-color: #34343a;
+}
+
+.search-bar-form:focus-within .search-button,
+.search-bar-form:focus-within .search-input  {
+  border-color: #ececec;
+}
+
+.search-bar-form .search-button,
+.search-bar-form .search-input {
+  border-top: 2px solid #27272a;
+  border-bottom: 2px solid #27272a;
+}
+
+.search-bar-form .search-button {
+  border-left: 2px solid #27272a;
+}
+
+.search-bar-form .search-input {
+  border-right: 2px solid #27272a;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
