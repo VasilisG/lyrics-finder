@@ -24,7 +24,7 @@ const Provider = ({ children }) => {
         setError('');
       }
     } catch(e) {
-      setError(e);
+      setError(e.message || e.toString());
     } finally {
       setLoading(false);
       setLyrics('');
@@ -44,7 +44,7 @@ const Provider = ({ children }) => {
         setError('');
       }
     } catch(e) {
-      setError(e);
+      setError(e.message || e.toString());
     }
   }
 

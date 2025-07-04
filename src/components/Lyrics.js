@@ -13,7 +13,9 @@ const Lyrics = () => {
   const lyricsRef = useRef(null);
 
   useEffect(() => {
-    lyricsRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (lyricsRef.current) {
+      lyricsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   }, [lyrics]);
 
   const showInfo = () => {
@@ -37,13 +39,13 @@ const Lyrics = () => {
 
   const showLyrics = () => {
     return error ? (
-      <div ref={lyricsRef} className='error rounded-[10px] w-full text-center text-red-600 bg-zinc-800/80 py-4 mb-3 px-4 md:px-0 md:mx-auto xl:mx-0 w-full'>{error}</div>
+      <div ref={lyricsRef} className='error rounded-[10px] w-full text-center text-red-600 bg-zinc-800/80 py-4 mb-3 px-4 md:px-0 md:mx-auto xl:mx-0 w-full'>{error.message || error.toString()}</div>
     ) : results.length ? (
       <div ref={lyricsRef} className={`lyrics rounded-[10px] w-full text-center text-white bg-zinc-800 hover:bg-zinc-800/80 hover:cursor-copy mb-3 px-4 md:px-0 md:mx-auto xl:mx-0 w-full ${lyrics ? 'py-4' : ''}`} 
       dangerouslySetInnerHTML={{
          __html: lyrics ? formatLyrics(lyrics) : results.length ? showInfo() : null
       }}
-      onClick={() => lyrics ? copyToClipboard() : {}}
+      onClick={() => lyrics ? copyToClipboard() : null}
       ></div>
     ) : <div ref={lyricsRef} className='hidden'></div>;
   }
